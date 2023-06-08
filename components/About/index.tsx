@@ -1,15 +1,19 @@
 import React from 'react';
-import AboutImg from './images/About.svg';
+
 
 const AboutTitle: React.FC = () => {
   return <>
     <div className="flex flex-col md:flex-row items-center justify-center my-8 md:my-16" style={{ padding: '50px' }}>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center pt-[150px] ">
         <img src="./images/About.svg" className="h-125 w-125 mb-4" alt="Imagem sobre" />
         <h1 className="text-purple-500 text-center md:text-left text-4xl whitespace-nowrap mb-4">
-          O CAMINHO CERTO PARA ENCONTRAR <span className="font-bold">O ORÇAMENTO IDEAL!</span>
+          O CAMINHO CERTO PARA ENCONTRAR <span className="font-bold text-yellow ">O ORÇAMENTO IDEAL!</span>
         </h1>
-        <p className="text-2xl text-center">ECONOMIZE TEMPO E DINHEIRO COM A MELHOR PLATAFORMA</p>
+        <p className=" pt-[20px] text-2xl text-center">
+           <span className="p-3" >
+              ECONOMIZE TEMPO E DINHEIRO COM A MELHOR PLATAFORMA
+            </span>
+           </p>
       </div>
     </div>
     <div className="text-center my-8 pt-[12rem] pb-[12rem]">

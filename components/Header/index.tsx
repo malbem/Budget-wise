@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
-import SearchBar from "../Search";
 
 const Header = () => {
   // Navbar toggle
@@ -72,7 +71,7 @@ const Header = () => {
             </div>
             <div className="flex w-full items-center justify-between px-4">
               <div>
-              <SearchBar/>
+                {/* CENTRO DA NAV */}
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
