@@ -1,10 +1,11 @@
 
+import Footer from '@/components/Footer';
 import SvgComponent from '@/components/SvgComponent';
 import Link from 'next/link';
 import React from 'react';
 
 const LoginModal: React.FC = () => {
-  return (
+  return <>
     <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -149,7 +150,8 @@ const LoginModal: React.FC = () => {
         </div>
         <SvgComponent/>
       </section>
-  );
+      <Footer/>
+  </>;
 }
 
 export default LoginModal;

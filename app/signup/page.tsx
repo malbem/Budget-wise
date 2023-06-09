@@ -1,9 +1,9 @@
+import Footer from "@/components/Footer";
 import SvgComponent from "@/components/SvgComponent";
 import Link from "next/link";
 
 const SignupPage = () => {
-  return (
-    <>
+  return  <>
       <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -166,8 +166,10 @@ const SignupPage = () => {
         </div>
         <SvgComponent/>
       </section>
+
+      <Footer />
     </>
-  );
+  
 };
 
 export default SignupPage;
