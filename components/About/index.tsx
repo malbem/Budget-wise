@@ -7,11 +7,15 @@ const AboutTitle: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-center my-8 md:my-16" style={{ padding: '50px' }}>
         <div className="flex flex-col items-center pt-[150px] ">
           <img src="./images/About.png" className="h-125 w-125 mb-4" alt="Imagem sobre" />
-          <h1 className="text-purple-500 text-center md:text-left text-4xl whitespace-nowrap mb-4">
-            O CAMINHO CERTO PARA ENCONTRAR <span className="font-bold text-yellow ">O ORÇAMENTO IDEAL!</span>
-          </h1>
-          <p className=" pt-[20px] text-2xl text-center">
-            <span className="p-3" >
+          <div className="text-center md:text-left text-4xl whitespace-normal mb-4">
+            <h1 className="text-purple-500">
+              O CAMINHO CERTO PARA ENCONTRAR{' '}
+              <span className="font-bold text-yellow">O ORÇAMENTO IDEAL!</span>
+            </h1>
+          </div>
+
+          <p className="pt-8 text-2xl text-center text-primary">
+            <span className="p-3">
               ECONOMIZE TEMPO E DINHEIRO COM A MELHOR PLATAFORMA
             </span>
           </p>
