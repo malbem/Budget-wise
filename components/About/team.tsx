@@ -5,11 +5,11 @@ const Team: React.FC = () => {
 
     useEffect(() => {
         const members = [
-            { name: 'Isaac Huston', image: 'https://via.placeholder.com/150/FF0000' },
-            { name: 'Victor Nascimento', image: 'https://via.placeholder.com/150/00FF00' },
-            { name: 'Gabriel Rodrigues', image: 'https://via.placeholder.com/150/0000FF' },
-            { name: 'Lucas Vinicius', image: 'https://via.placeholder.com/150/FF00FF' },
-            { name: 'Victor Augusto', image: 'https://via.placeholder.com/150/FFFF00' }
+            { name: 'Isaac Huston', image: './images/Foto.png' },
+            { name: 'Victor Nascimento', image: './images/Foto.png' },
+            { name: 'Gabriel Rodrigues', image: './images/Foto.png' },
+            { name: 'Lucas Vinicius', image: './images/Foto.png' },
+            { name: 'Victor Augusto', image: './images/Foto.png' }
         ];
 
         // Embaralhar a ordem dos membros
