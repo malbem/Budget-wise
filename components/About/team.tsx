@@ -29,10 +29,10 @@ const Team: React.FC = () => {
     };
 
     return (
-        <section>
+        <section className='pb-14' >
             <div className="flex flex-col items-center py-[100px]">
                 <h2 className="text-center mb-4 text-6xl font-bold pb-10">Nossa Equipe</h2>
-                <p className=' pb-10 text-xl max-w-[1000px] opacity-70 ' >Na Budget Wise, nossa equipe também compartilha a paixão pela tecnologia e está empenhada em oferecer o melhor atendimento ao cliente. Com anos de experiência em fornecer soluções orçamentárias eficientes, estamos constantemente buscando maneiras de aprimorar nossos serviços e garantir a satisfação de nossos clientes. Venha nos conhecer e descubra como podemos ajudá-lo a encontrar o melhor orçamento para o seu projeto. Estamos ansiosos para ajudá-lo!</p>
+                <p className=' px-10 pb-10 text-xl max-w-[1000px] opacity-70 ' >Na Budget Wise, nossa equipe também compartilha a paixão pela tecnologia e está empenhada em oferecer o melhor atendimento ao cliente. Com anos de experiência em fornecer soluções orçamentárias eficientes, estamos constantemente buscando maneiras de aprimorar nossos serviços e garantir a satisfação de nossos clientes. Venha nos conhecer e descubra como podemos ajudá-lo a encontrar o melhor orçamento para o seu projeto. Estamos ansiosos para ajudá-lo!</p>
                 <div className="flex justify-center flex-wrap gap-4">
                     {teamMembers.map((member, index) => (
                         <div className=" hover:cursor-pointer hover:scale-110 p-5 flex flex-col items-center animate animate-fadeIn" key={index}>

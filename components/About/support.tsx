@@ -3,7 +3,7 @@ import React from 'react';
 const Support: React.FC = () => {
   return (
     <section className="bg-gray-800 text-white">
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="items-center justify-center max-h-[50vh]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
