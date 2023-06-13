@@ -1,6 +1,9 @@
 import React from "react";
+import { useTheme } from "next-themes";
 
 const Footer: React.FC = () => {
+  const { theme } = useTheme();
+  const logoSrc = theme === "dark" ? "/images/logo/logo.svg" : "/images/logo/logo-2.svg";
   return (
     <footer className="pt-10 text-center">
       <section className="map1 bg-gray-100 py-10 w-full">
@@ -12,20 +15,14 @@ const Footer: React.FC = () => {
           ></iframe>
         </div>
       </section>
-
-
       <section className="contacts1 py-10">
         <div className="container mx-auto">
-          <div className="flex flex-col items-center">
-            <img src="/images/logo/logo.svg" alt="Budget Wise" className="w-24 h-24" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div className="flex items-center justify-center space-x-8">
+            <img src={logoSrc} alt="Budget Wise" className="w-40 h-40" />
             <div className="card">
               <div className="card-wrapper flex items-center">
-                <a className="iconfont-wrapper" href="#" target="_blank">
-                  <span className="icon-bg icon1"></span>
-                  <span className="p-2 mbr-iconfont mobi-mbri-map-pin mobi-mbri"></span>
-                </a>
+                <span className="icon-bg icon1"></span>
+                <span className="p-2 mbr-iconfont mobi-mbri-map-pin mobi-mbri"></span>
                 <div className="card-box my-auto">
                   <h5 className="card-text text-lg">Patos de Minas</h5>
                   <div>244 Rua de Deus</div>
@@ -34,10 +31,8 @@ const Footer: React.FC = () => {
             </div>
             <div className="card">
               <div className="card-wrapper flex items-center">
-                <a className="iconfont-wrapper" href="#" target="_blank">
-                  <span className="icon-bg icon2"></span>
-                  <span className="p-2 mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
-                </a>
+                <span className="icon-bg icon2"></span>
+                <span className="p-2 mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
                 <div className="card-box my-auto">
                   <h5 className="card-text text-lg">support@budgetwise.com</h5>
                   <div>connect@budgetwise.com</div>
@@ -46,10 +41,8 @@ const Footer: React.FC = () => {
             </div>
             <div className="card">
               <div className="card-wrapper flex items-center">
-                <a className="iconfont-wrapper" href="#" target="_blank">
-                  <span className="icon-bg icon3"></span>
-                  <span className="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
-                </a>
+                <span className="icon-bg icon3"></span>
+                <span className="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
                 <div className="card-box my-auto">
                   <h5 className="card-text text-lg">0 (800) 123 45 67</h5>
                   <div>0 (800) 231 54 76</div>
@@ -59,6 +52,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </section>
+
       <section className="footer1 bg-dark py-4">
         <div className="container mx-auto">
           <div className="flex justify-center items-center">
