@@ -1,6 +1,7 @@
 import React from 'react';
 import Team from './team';
 import SvgComponent from '../SvgComponent';
+import Support from './support';
 
 
 const AboutTitle: React.FC = () => {
@@ -37,11 +38,29 @@ const AboutTitle: React.FC = () => {
         </div>
       </div>
     </section>
-
-    
-
-
     <Team />
+
+    <section className="flex justify-center items-center h-screen">
+      <div className="max-w-6xl border border-dashed p-10 rounded-lg">
+        <h2 className="text-6xl font-extrabold mb-4 text-center">Os clientes dizem</h2>
+        <div className="p-8">
+          <div className="mb-4">
+            <p className="text-xl mb-3 opacity-70">
+              <span className="text-2xl mr-2">
+                &#8220;Minha experiência na Budget Wise foi incrível! Encontrei exatamente o que precisava para meu projeto, com orçamentos personalizados e uma ampla rede de fornecedores. A equipe de suporte foi excepcional, me auxiliando em todas as etapas. Recomendo a Budget Wise a todos que buscam qualidade e economia. &#8221;
+              </span>
+            </p>
+          </div>
+          <h3 className="pt-5 text-xl font-semibold mb-2 text-end">Gustavo Guanabara</h3>
+          <h4 className="text-lg font-normal text-end opacity-70">CLIENTE DA EMPRESA</h4>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <Support />
 
 
 
