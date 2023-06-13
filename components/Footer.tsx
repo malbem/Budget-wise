@@ -1,12 +1,13 @@
 import React from "react";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 
 const Footer: React.FC = () => {
-  const { theme } = useTheme();
-  const logoSrc = theme === "dark" ? "/images/logo/logo.svg" : "/images/logo/logo-2.svg";
+  // const { theme } = useTheme();
+  // const logoSrc = theme === "dark" ? "/images/logo/logo.svg" : "/images/logo/logo-2.svg";
   return (
     <footer className="pt-10 text-center">
-      <section className="map1 bg-gray-100 py-10 w-full">
+      
+      {/* <section className="map1 bg-gray-100 py-10 w-full">
         <div className="google-map">
           <iframe
             title="Google Map"
@@ -61,7 +62,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </footer>
   );
 };
