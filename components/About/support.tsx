@@ -2,9 +2,9 @@ import React from 'react';
 
 const Support: React.FC = () => {
   return (
-    <section className="bg-gray-800 text-white">
-      <div className="items-center justify-center max-h-[50vh]">
-        <div className="max-w-6xl mx-auto px-6">
+    <section className=" text-white">
+     <div className="items-center justify-center ">
+        <div className="max-w-6xl mx-auto px-6  m-0">
           <div className="overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className=" border p-6 mr-2 bg-gray-800 sm:rounded-lg text-dark dark:text-white">
