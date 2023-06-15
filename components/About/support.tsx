@@ -32,8 +32,8 @@ const Support: React.FC = () => {
                   <div className="ml-4 text-md tracking-wide font-semibold">
                     0 (800) 123 45 67
                   </div>
-                </div>
-
+                </div> 
+ 
                 <div className="flex items-center mt-2">
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" className="w-8 h-8 text-gray-500">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>

@@ -11,7 +11,7 @@ const Team: React.FC = () => {
             { name: 'Lucas Vinicius', image: './images/Foto.png', link: 'https://github.com/LUC4SLIM4' },
             { name: 'Victor Augusto', image: './images/Foto.png', link: 'https://github.com/victormatosx' }
         ];
-
+ 
         // Embaralhar a ordem dos membros
         const shuffledMembers = shuffleArray(members);
 

@@ -9,13 +9,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
+  return ( 
     <html suppressHydrationWarning lang="pt-br">
       {/*
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
+      <head /> 
 
       <body className={`dark:bg-gradient-to-t dark:from-violet dark:to-dark`}>
         <Providers>

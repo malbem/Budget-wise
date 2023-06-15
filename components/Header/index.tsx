@@ -10,7 +10,7 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
-  };
+  }; 
 
 
   const [sticky, setSticky] = useState(false);

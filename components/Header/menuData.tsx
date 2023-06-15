@@ -12,7 +12,7 @@ const menuData: Menu[] = [
     title: "About",
     newTab: false,
     submenu: [
-      {
+      { 
         id: 3,
         title: "Company",
         newTab: false,

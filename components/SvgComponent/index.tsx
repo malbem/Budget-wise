@@ -13,7 +13,7 @@ const SvgComponent = () => (
         id="mask0_95:1005"
         style={{ maskType: "alpha" }}
         maskUnits="userSpaceOnUse"
-        x="0"
+        x="0" 
         y="0"
         width="1440"
         height="969"
