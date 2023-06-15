@@ -2,7 +2,6 @@
 
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
-import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 
 export default function RootLayout({
@@ -18,7 +17,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className="bg-gradient-to-r from-gray-200 to-slate-300 dark:bg-gradient-to-br dark:from-indigo-700 dark:to-fuchsia-900">
+      <body className="dark:bg-dark">
         <Providers>
           <Header />
           {children}
