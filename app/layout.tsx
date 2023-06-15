@@ -17,7 +17,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className="dark:bg-dark">
+      <body className="bg-gradient-to-br from-indigo-700 to-fuchsia-900">
         <Providers>
           <Header />
           {children}
