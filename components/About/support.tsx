@@ -2,12 +2,12 @@ import React from 'react';
 
 const Support: React.FC = () => {
   return (
-    <section className=" text-white">
-     <div className="items-center justify-center ">
+    <section>
+      <div className="items-center justify-center ">
         <div className="max-w-6xl mx-auto px-6  m-0">
           <div className="overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className=" border p-6 mr-2 bg-gray-800 sm:rounded-lg text-dark dark:text-white">
+              <div className=" border p-6 mr-2 bg-gray-800 sm:rounded-lg">
                 <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-left">
                   Entrar em contato
                 </h1>
