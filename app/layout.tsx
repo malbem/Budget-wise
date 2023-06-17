@@ -1,6 +1,6 @@
 "use client";
 
-import Header from "@/components/Header";
+import Header from "@/components/NavLadding";
 import ScrollToTop from "@/components/ScrollToTop";
 import "../styles/index.css";
 
@@ -19,7 +19,6 @@ export default function RootLayout({
 
       <body className={`dark:bg-gradient-to-t dark:from-violet dark:to-dark`}>
         <Providers>
-          <Header />
           {children}
           <ScrollToTop />
         </Providers>

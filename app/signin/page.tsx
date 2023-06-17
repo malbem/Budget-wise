@@ -1,11 +1,13 @@
 
 import Footer from '@/components/Footer';
+import Header from '@/components/NavLadding';
 import SvgComponent from '@/components/SvgComponent';
 import Link from 'next/link';
 import React from 'react';
 
 const LoginModal: React.FC = () => {
   return <>
+    <Header />
     <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
@@ -133,7 +135,7 @@ const LoginModal: React.FC = () => {
                   </div>
                 </div>
                 <div className="mb-6">
-                  <Link href="/dashboard">
+                  <Link href="/e-commerce">
                     <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
                       Login
                     </button>

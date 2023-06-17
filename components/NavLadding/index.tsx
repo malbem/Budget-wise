@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
+import ThemeToggler from "../ThemeToggler";
 
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
-  }; 
+  };
 
 
   const [sticky, setSticky] = useState(false);
@@ -25,7 +25,6 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
-
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index) => {
     if (openIndex === index) {
@@ -37,6 +36,7 @@ const Header = () => {
 
 
   return (
+
     <>
       <header
         className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${sticky
