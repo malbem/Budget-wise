@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import SvgComponent from "@/components/SvgComponent";
 import Link from "next/link";
 
-const SignupPage = () => { 
+const SignupPage = () => {
   return <>
     <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
       <div className="container">
@@ -149,9 +149,11 @@ const SignupPage = () => {
                   </label>
                 </div>
                 <div className="mb-6">
-                  <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                    Criar conta
-                  </button>
+                  <Link href="/signin" >
+                    <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                      Criar conta
+                    </button>
+                  </Link>
                 </div>
               </form>
               <p className="text-center text-base font-medium text-body-color">

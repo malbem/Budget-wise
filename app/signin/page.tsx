@@ -2,7 +2,7 @@
 import Footer from '@/components/Footer';
 import SvgComponent from '@/components/SvgComponent';
 import Link from 'next/link';
-import React from 'react'; 
+import React from 'react';
 
 const LoginModal: React.FC = () => {
   return <>
@@ -133,9 +133,11 @@ const LoginModal: React.FC = () => {
                   </div>
                 </div>
                 <div className="mb-6">
-                  <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                    Login
-                  </button>
+                  <Link href="/dashboard">
+                    <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                      Login
+                    </button>
+                  </Link>
                 </div>
               </form>
               <p className="text-center text-base font-medium text-body-color">
