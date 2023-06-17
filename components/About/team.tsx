@@ -38,7 +38,8 @@ const Team: React.FC = () => {
                     {teamMembers.map((member, index) => (
                         <a href={member.link}>
                             <div className=" hover:cursor-pointer hover:scale-110 p-5 flex flex-col items-center animate animate-fadeIn" key={index}>
-                                <img className="rounded-lg max-w-[150px] h-auto " src={member.image} alt={`Imagem ${index + 1}`} />
+                            {/* Inverter:  dark:brightness-100 dark:invert-[100] */}
+                            <img className="rounded-lg max-w-[150px] h-auto dark:filter" src={member.image} alt={`Imagem ${index + 1}`} />
                                 <p className="text-center text-xs mt-2">{member.name}</p>
 
                             </div>
