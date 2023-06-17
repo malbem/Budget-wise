@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
-import menuData from "./menuData";
+
 
 const Header = () => {
 
@@ -80,7 +80,7 @@ const Header = () => {
                   href="/signin"
                   className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
                 >
-                  Login
+                  paodebatata
                 </Link>
                 <Link
                   href="/signup"
