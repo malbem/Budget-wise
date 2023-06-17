@@ -2,12 +2,12 @@ import React from 'react';
 
 const Support: React.FC = () => {
   return (
-    <section className=" text-white">
-     <div className="items-center justify-center ">
+    <section>
+      <div className="items-center justify-center ">
         <div className="max-w-6xl mx-auto px-6  m-0">
           <div className="overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className=" border p-6 mr-2 bg-gray-800 sm:rounded-lg text-dark dark:text-white">
+              <div className=" border p-6 mr-2 bg-gray-800 sm:rounded-lg">
                 <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-left">
                   Entrar em contato
                 </h1>
@@ -32,8 +32,8 @@ const Support: React.FC = () => {
                   <div className="ml-4 text-md tracking-wide font-semibold">
                     0 (800) 123 45 67
                   </div>
-                </div>
-
+                </div> 
+ 
                 <div className="flex items-center mt-2">
                   <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" className="w-8 h-8 text-gray-500">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
