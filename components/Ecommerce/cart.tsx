@@ -3,7 +3,7 @@ import Carinho from './carinho';
  
 const Cart = () => {
     const subTotal = Carinho.reduce((total, produto) => total + produto.preco, 0);
-
+ 
     return (
         <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6 scroll-m-1 scroll-smooth scroll- ">
             <div className="flex items-start justify-between">
