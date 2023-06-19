@@ -14,5 +14,5 @@ const Templete: React.FC = () => {
     </>;
 } 
 {/* Altere o nome com o mesmo do de cima */}
-export default Templete;     
+export default Templete;      
  
