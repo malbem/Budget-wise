@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
- 
+  
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
