@@ -1,5 +1,5 @@
 const produtos = [
-  {
+  { 
     id: 1,
     href: "https://google.com",
     imagem: "/images/produtos/produto_01.png",
