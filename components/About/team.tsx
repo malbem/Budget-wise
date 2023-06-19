@@ -6,7 +6,7 @@ const Team: React.FC = () => {
  
     useEffect(() => {
         const members = [
-           { name: 'Isaac Huston', image: './images/Foto.png', link: 'https://github.com/malbem' },
+            { name: 'Isaac Huston', image: './images/Foto.png', link: 'https://github.com/malbem' },
             { name: 'Victor Nascimento', image: './images/Foto.png', link: 'https://github.com/victornascimentodiniz' },
             { name: 'Gabriel Rodrigues', image: './images/Foto.png', link: 'https://github.com/Gabrew' },
             { name: 'Lucas Vinicius', image: './images/Foto.png', link: 'https://github.com/LUC4SLIM4' },
