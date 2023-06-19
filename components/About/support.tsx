@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Support: React.FC = () => {
-  return (
+  return ( 
     <section id="Contact-us">
       <div className="flex items-center justify-center">
         <div className="max-w-6xl mx-auto px-6 m-0"> 
