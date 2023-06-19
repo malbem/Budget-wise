@@ -2,7 +2,7 @@
  
 import React, { useState, useEffect } from "react";
 
-interface CarouselProps {
+interface CarouselProps { 
   images: string[];
 }
 
