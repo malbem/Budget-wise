@@ -6,7 +6,7 @@ import ThemeToggler from "../ThemeToggler";
 import { FaSearch, FaShoppingCart, FaHeart, FaUser, FaBars } from "react-icons/fa";
 import Modal from "../Modal";
 import Cart from "./cart";
-
+ 
 const Header = () => {
     const [sticky, setSticky] = useState(false);
     const handleStickyNavbar = () => {
