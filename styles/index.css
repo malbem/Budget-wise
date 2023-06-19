@@ -15,7 +15,7 @@
     @apply inline-flex;
   }
 
-  .sticky .header-logo {
+    .sticky .header-logo {
     @apply py-5 lg:py-2;
   }
 
