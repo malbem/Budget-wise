@@ -24,7 +24,7 @@ const Support: React.FC = () => {
                     strokeWidth="2"
                     viewBox="0 0 24 24"
                     className="w-8 h-8 text-gray-500"
-                  >
+                  > 
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
