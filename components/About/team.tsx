@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Team: React.FC = () => {
     const [teamMembers, setTeamMembers] = useState<{ name: string; image: string, link: string }[]>([]);
-
+ 
     useEffect(() => {
         const members = [
             { name: 'Isaac Huston', image: './images/Foto.png', link: 'https://github.com/malbem' },
