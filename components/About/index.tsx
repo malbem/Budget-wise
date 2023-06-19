@@ -6,7 +6,7 @@ import Header from '../NavLadding';
                          
 const AboutTitle: React.FC = () => {
   return <>
-    <Header/>
+  <Header/>
     <section >
       <div className="flex flex-col md:flex-row items-center justify-center my-8 md:my-16 p-[50px] ">
         <div className="flex flex-col items-center">
