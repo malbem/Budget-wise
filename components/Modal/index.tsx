@@ -7,7 +7,7 @@ type ModalProps = {
    children: React.ReactNode;
 };
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => { 
   const modalRef = useRef<HTMLDivElement>(null); 
 
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
