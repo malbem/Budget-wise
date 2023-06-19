@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer"; 
 import Header from "@/components/NavLadding";
 import SvgComponent from "@/components/SvgComponent";
 import Link from "next/link";
