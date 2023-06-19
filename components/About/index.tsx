@@ -43,7 +43,7 @@ const AboutTitle: React.FC = () => {
    
     <section className=" justify-center items-center pb-[70px]">
       <div className="max-w-6xl mx-auto">
-        <div className="border border-dashed p-10 rounded-lg">
+          <div className="border border-dashed p-10 rounded-lg">
           <h2 className="text-4xl sm:text-6xl font-extrabold mb-4 text-center">Os clientes dizem</h2>
           <div className="p-8">
             <div className="mb-4">
