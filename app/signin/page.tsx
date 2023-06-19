@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import Header from '@/components/NavLadding';
 import SvgComponent from '@/components/SvgComponent';
 import Link from 'next/link';
-import React from 'react'; 
+import React from 'react';  
   
 const LoginModal: React.FC = () => {
   return <>
