@@ -4,7 +4,7 @@ const Support: React.FC = () => {
   return (
     <section id="Contact-us">
       <div className="flex items-center justify-center">
-        <div className="max-w-6xl mx-auto px-6 m-0">
+        <div className="max-w-6xl mx-auto px-6 m-0"> 
           <div className="overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="border p-6 bg-gray-800 sm:rounded-lg">
