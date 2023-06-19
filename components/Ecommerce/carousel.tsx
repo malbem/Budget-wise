@@ -27,7 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   }, []); 
 
   return (
-    <div className="relative cursor-pointer">
+    <div className="relative cursor-pointer"> 
       <img
         className="rounded w-full max-h-64"
         src={images[currentIndex]}
