@@ -27,8 +27,8 @@ const AboutTitle: React.FC = () => {
         </div>
       </div>
     </section>
-    <section>
-      <div className="text-center my-8 pt-[12rem] pb-[2rem]">
+    <section id='About'>
+      <div className="text-center my-8 pt-[12rem] pb-[2rem]" >
         <div className="inline-block rounded-lg p-10  border border-dashed">
           <h1 className="text-6xl font-bold mb-4">Quem Somos</h1>
           <p className=" text-left text-xl px-4 max-w-[750px] pt-[35px] opacity-70">

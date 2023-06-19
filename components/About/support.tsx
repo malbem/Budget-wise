@@ -2,7 +2,7 @@ import React from 'react';
 
 const Support: React.FC = () => {
   return (
-    <section>
+    <section id='Contact-us' >
       <div className="items-center justify-center ">
         <div className="max-w-6xl mx-auto px-6  m-0">
           <div className="overflow-hidden">

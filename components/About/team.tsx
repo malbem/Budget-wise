@@ -29,7 +29,7 @@ const Team: React.FC = () => {
     };
 
     return (
-        <section className='pb-14' >
+        <section className='pb-14'  id='Team'>
             <div className="flex flex-col items-center py-[100px]">
                 <h2 className="text-center mb-4 text-6xl font-bold pb-10">Nossa Equipe</h2>
                 <p className=' px-10 pb-10 text-xl max-w-[1000px] opacity-70 ' >Na Budget Wise, nossa equipe também compartilha a paixão pela tecnologia e está empenhada em oferecer o melhor atendimento ao cliente. Com anos de experiência em fornecer soluções orçamentárias eficientes, estamos constantemente buscando maneiras de aprimorar nossos serviços e garantir a satisfação de nossos clientes. Venha nos conhecer e descubra como podemos ajudá-lo a encontrar o melhor orçamento para o seu projeto. Estamos ansiosos para ajudá-lo!</p>
