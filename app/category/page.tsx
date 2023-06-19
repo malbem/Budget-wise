@@ -13,7 +13,7 @@ const Ecommerce: React.FC = () => {
             <div className='p-5 px-[70px]' >
                 <EcommerceFilter />
             </div>
-        </section>
+        </section> 
         <Footer />
  
     </>;
