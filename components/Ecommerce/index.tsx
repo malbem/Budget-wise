@@ -1,7 +1,7 @@
 import React from "react";
 import produtos from "./produtos";
 import Card from "./Card";
-import Carousel from "./carousel"; 
+import Carousel from "./carousel";  
 
  
 const HomeEcommerce: React.FC = () => {
