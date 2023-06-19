@@ -1,5 +1,5 @@
 import React from 'react';
-import Carinho from './carinho';
+import Carinho from './carinho'; 
  
 const Cart = () => {
     const subTotal = Carinho.reduce((total, produto) => total + produto.preco, 0);
