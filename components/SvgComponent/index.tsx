@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 
 const SvgComponent = () => (
   <div className="absolute top-0 left-0 z-[-1]">
