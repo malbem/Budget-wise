@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); 
   const [modalContent, setModalContent] = useState<React.ReactNode | null>(null); 
 
-  const handleOpenModal = (content: React.ReactNode) => {
-    setModalContent(content);
-    setIsModalOpen(true);
+  const handleOpenModal = (content: React.ReactNode) => { 
+    setModalContent(content); 
+    setIsModalOpen(true); 
   };
 
   const handleModalClose = () => {
