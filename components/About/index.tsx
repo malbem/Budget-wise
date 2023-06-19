@@ -2,7 +2,7 @@ import React from 'react';
 import Team from './team'; 
 import Support from './support';
 import Header from '../NavLadding';
-     
+      
               
 const AboutTitle: React.FC = () => {
   return <>
