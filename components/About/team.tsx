@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
- 
+   
 
 const Team: React.FC = () => {
     const [teamMembers, setTeamMembers] = useState<{ name: string; image: string, link: string }[]>([]);
