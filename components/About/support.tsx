@@ -135,5 +135,5 @@ const Support: React.FC = () => {
     </section>
   );
 };
-
+ 
 export default Support;
