@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ThemeToggler from "../ThemeToggler";
-import { FaSearch, FaShoppingCart, FaHeart, FaUser } from "react-icons/fa";
+import { FaSearch, FaShoppingCart, FaHeart, FaUser, FaBars } from "react-icons/fa";
 import Modal from "../Modal";
 
 const Header = () => {
@@ -26,6 +26,10 @@ const Header = () => {
         setIsModalOpen(false);
     };
 
+    const handleThemeTogglerClick = () => {
+        setIsModalOpen(false);
+    };
+
     useEffect(() => {
         window.addEventListener("scroll", handleStickyNavbar);
         return () => {
@@ -45,19 +49,41 @@ const Header = () => {
     };
 
     const menuItems = [
-        { label: "Home", url: "/e-commerce", onClick: handleModalClose, },
+        { label: "Home", url: "/e-commerce", onClick: handleModalClose },
         {
             label: "Serviços",
             url: "#",
-            onClick: handleModalClose, 
+            onClick: handleModalClose,
             dropdown: [
                 { label: "Serviço 1", url: "/e-commerce" },
                 { label: "Serviço 2", url: "#" },
                 { label: "Serviço 3", url: "#" },
             ],
         },
-        { label: "Categorias", url: "#", onClick: handleModalClose, dropdown: [{ label: "Categoria 1", url: "#" }] },
+        {
+            label: "Categorias",
+            url: "#",
+            onClick: handleModalClose,
+            dropdown: [{ label: "Categoria 1", url: "#" }],
+        },
     ];
+
+    
+    const searchContainerRef = useRef(null);
+
+    const handleOutsideClick = (event) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+        setSearchActive(false);
+      }
+    };
+  
+    useEffect(() => {
+      document.addEventListener('mousedown', handleOutsideClick);
+      return () => {
+        document.removeEventListener('mousedown', handleOutsideClick);
+      };
+    }, []);
+
 
     const [activeDropdown, setActiveDropdown] = useState(null);
     const dropdownRef = useRef(null);
@@ -79,17 +105,25 @@ const Header = () => {
         };
     }, []);
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleMenuToggle = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <>
             <header
                 className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${sticky
-                    ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
-                    : "absolute"
+                        ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
+                        : "absolute"
                     }`}
             >
                 <Modal isOpen={isModalOpen} onClose={handleModalClose}>
                     <h2>Modal Content</h2>
-                    <button onClick={handleModalClose}>Close Modal</button>
+                    <div className="pt-5 flex justify-center items-center">
+                        <div className="pt-5 flex justify-center items-center"></div>
+                    </div>
                 </Modal>
 
                 <div className="container">
@@ -97,7 +131,8 @@ const Header = () => {
                         <div className="w-60 max-w-full px-4 xl:mr-12">
                             <Link
                                 href="/e-commerce"
-                                className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"}`}
+                                className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"
+                                    }`}
                             >
                                 <Image
                                     src="/images/logo/logo-2.svg"
@@ -115,53 +150,115 @@ const Header = () => {
                                 />
                             </Link>
                         </div>
-                        <div className="flex w-full items-center justify-between px-4 ">
+                        <div className="flex w-full items-center justify-around px-4">
+                            <button
+                                className=" pr-4 lg:hidden focus:outline-none hover:opacity-70 hover:scale-125 "
+                                onClick={handleMenuToggle}
+                            >
+                                <FaBars className="h-6 w-6" />
+                            </button>
                             {searchActive ? (
-                                <div className={`search mx-auto ${searchActive ? "" : "hidden"}`}>
-                                    <div className="flex items-center">
-                                        <input
-                                            type="text"
-                                            placeholder="Pesquisar"
-                                            className="border-primary border-2 dark:text-black w-[900px] bg-white px-4 py-2 rounded-md transition-colors duration-300"
-                                        />
-                                        <a className="hover:opacity-70 ml-2" href="#" onClick={handleSearchToggle}>
-                                            <FaSearch className="text-primary h-6 w-6" />
-                                        </a>
+                                <div ref={searchContainerRef} className={`backdrop-blur-sm search fixed inset-0 flex justify-center pt-[45px] ${searchActive ? "" : "hidden"}`}>
+                                    <div className="w-full max-w-4xl">
+                                        <div className="flex items-center">
+                                            <input
+                                                type="text"
+                                                placeholder="Pesquisar"
+                                                className="w-full border-primary border-2 dark:text-black bg-white px-4 py-2 rounded-md transition-colors duration-300"
+                                            />
+                                            <a
+                                                className="hover:opacity-70 ml-2"
+                                                href="#"
+                                                onClick={handleSearchToggle}
+                                            >
+                                                <FaSearch className="text-primary h-6 w-6" />
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+
                             ) : (
-                                <ul className="flex px-4 mx-auto font-semibold font-heading space-x-12">
-                                    {menuItems.map((item, index) => (
-                                        <li key={index} className="relative">
-                                            <div
-                                                className="hover:opacity-70 cursor-pointer"
+                                <>
+                                    {menuOpen && (
+                                        <div className=" absolute top-16 left-0 right-0 z-50 backdrop-blur-sm">
+                                            <ul className="flex flex-col items-center space-y-4 py-4 pt-3">
+                                                {menuItems.map((item, index) => (
+                                                    <li
+                                                        key={index}
+                                                        className="relative"
+                                                        onClick={() => {
+                                                            item.onClick && item.onClick();
+                                                            handleDropdownToggle(index);
+                                                            setMenuOpen(false);
+                                                        }}
+                                                    >
+                                                        <div className="hover:opacity-70 cursor-pointer">
+                                                            {item.label}
+                                                        </div>
+                                                        {activeDropdown === index &&
+                                                            item.dropdown &&
+                                                            item.dropdown.length > 0 && (
+                                                                <ul
+                                                                    ref={dropdownRef}
+                                                                    className="absolute left-0 ml-1 mt-2 py-2 bg-white text-black rounded-md shadow-md"
+                                                                >
+                                                                    {item.dropdown.map(
+                                                                        (dropdownItem, dropdownIndex) => (
+                                                                            <li
+                                                                                key={dropdownIndex}
+                                                                                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                                            >
+                                                                                <Link href={dropdownItem.url}>
+                                                                                    <div>{dropdownItem.label}</div>
+                                                                                </Link>
+                                                                            </li>
+                                                                        )
+                                                                    )}
+                                                                </ul>
+                                                            )}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                    <ul className=" px-4 mx-auto font-semibold font-heading space-x-12 hidden lg:flex">
+                                        {menuItems.map((item, index) => (
+                                            <li
+                                                key={index}
+                                                className="relative"
                                                 onClick={() => {
                                                     item.onClick && item.onClick();
                                                     handleDropdownToggle(index);
                                                 }}
                                             >
-                                                {item.label}
-                                            </div>
-                                            {activeDropdown === index && item.dropdown && (
-                                                <ul
-                                                    ref={dropdownRef}
-                                                    className="absolute left-0 ml-1 mt-2 py-2 bg-white text-black rounded-md shadow-md"
-                                                >
-                                                    {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                                                        <li
-                                                            key={dropdownIndex}
-                                                            className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                <div className="hover:opacity-70 cursor-pointer">
+                                                    {item.label}
+                                                </div>
+                                                {activeDropdown === index &&
+                                                    item.dropdown &&
+                                                    item.dropdown.length > 0 && (
+                                                        <ul
+                                                            ref={dropdownRef}
+                                                            className="absolute left-0 ml-1 mt-2 py-2 bg-white text-black rounded-md shadow-md"
                                                         >
-                                                            <Link href={dropdownItem.url}>
-                                                                <div>{dropdownItem.label}</div>
-                                                            </Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
+                                                            {item.dropdown.map(
+                                                                (dropdownItem, dropdownIndex) => (
+                                                                    <li
+                                                                        key={dropdownIndex}
+                                                                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                                    >
+                                                                        <Link href={dropdownItem.url}>
+                                                                            <div>{dropdownItem.label}</div>
+                                                                        </Link>
+                                                                    </li>
+                                                                )
+                                                            )}
+                                                        </ul>
+                                                    )}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </>
                             )}
                             <div className="flex items-center space-x-5 pr-10">
                                 {searchActive ? null : (
@@ -172,7 +269,7 @@ const Header = () => {
                                             onClick={(e) => {
                                                 handleSearchToggle();
                                                 handleModalClose();
-                                              }}
+                                            }}
                                         >
                                             <FaSearch className="h-6 w-6" />
                                         </a>
@@ -180,20 +277,34 @@ const Header = () => {
                                         <a
                                             className="hover:opacity-70 hover:scale-125"
                                             href="#"
-                                            onClick={handleOpenModal}
+                                            onClick={() => {
+                                                if (isModalOpen) {
+                                                    handleModalClose();
+                                                } else {
+                                                    handleOpenModal();
+                                                }
+                                            }}
                                         >
                                             <FaShoppingCart className="h-6 w-6" />
                                         </a>
-                                        <a className="flex items-center hover:scale-125 hover:opacity-70" href="#" onClick={handleModalClose}>
+                                        <a
+                                            className="flex items-center hover:scale-125 hover:opacity-70"
+                                            href="#"
+                                            onClick={handleModalClose}
+                                        >
                                             <FaHeart className="h-6 w-6" />
                                         </a>
-                                        <a className="flex items-center  hover:scale-125 hover:opacity-70" href="#"  onClick={handleModalClose}>
+                                        <a
+                                            className="flex items-center  hover:scale-125 hover:opacity-70"
+                                            href="#"
+                                            onClick={handleModalClose}
+                                        >
                                             <FaUser className="h-6 w-6 hover:text-gray-200" />
                                         </a>
                                     </>
                                 )}
                             </div>
-                            <ThemeToggler  />
+                            <ThemeToggler onClick={handleThemeTogglerClick} />
                         </div>
                     </div>
                 </div>
