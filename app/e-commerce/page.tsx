@@ -17,4 +17,4 @@ const Ecommerce: React.FC = () => {
     </>;
 }
 
-export default Ecommerce;
+export default Ecommerce; 
