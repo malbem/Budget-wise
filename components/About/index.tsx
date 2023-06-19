@@ -21,7 +21,7 @@ const AboutTitle: React.FC = () => {
           <p className="pt-8 text-2xl text-center text-primary">
             <span className="p-3">
               ECONOMIZE TEMPO E DINHEIRO COM A MELHOR PLATAFORMA
-            </span>
+          </span>
           </p>
         </div>
       </div>
