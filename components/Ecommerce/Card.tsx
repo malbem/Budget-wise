@@ -67,7 +67,7 @@ const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href }
     <a href={href}>
       <div className=" hover:scale-[1.03] w-full max-w-sm bg-white border border-[#5f5f5f] rounded-lg shadow dark:bg-[#1a202c] dark:border-[#1c212c]">
         <div className="flex justify-center">
-          <img className="p-8 w-full h-50 object-contain" src={imagem} alt="product image" />
+          <img className=" rounded-[50px] p-8 w-full h-50 object-contain" src={imagem} alt="product image" />
         </div>
         <div className="px-5 pb-5">
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{descricao}</h5>

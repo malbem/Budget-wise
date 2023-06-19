@@ -5,10 +5,10 @@ import Carousel from "./carousel";
 
 const HomeEcommerce: React.FC = () => {
   const images = [
-    "https://via.placeholder.com/800x400",
-    "https://via.placeholder.com/800x400/ff0000",
-    "https://via.placeholder.com/800x400/00ff00",
-    "https://via.placeholder.com/800x400/0000ff",
+    "images/carousel/promocao-01.png",
+    "images/carousel/promocao-01.png",
+    "images/carousel/promocao-01.png",
+  
   ];
 
 
