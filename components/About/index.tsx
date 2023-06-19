@@ -2,13 +2,13 @@ import React from 'react';
 import Team from './team'; 
 import Support from './support';
 import Header from '../NavLadding';
-     
           
+                          
 const AboutTitle: React.FC = () => {
   return <>
-    <Header/>
+  <Header/>
     <section >
-      <div className="flex flex-col md:flex-row items-center justify-center my-8 md:my-16 p-[50px] ">
+       <div className="flex flex-col md:flex-row items-center justify-center my-8 md:my-16 p-[50px] ">
         <div className="flex flex-col items-center">
           <img src="./images/About.png" className="h-125 w-125 mb-4" alt="Imagem sobre" />
           <div className="text-center md:text-left text-4xl whitespace-normal mb-4">
@@ -17,7 +17,7 @@ const AboutTitle: React.FC = () => {
               <span className="font-bold text-yellow">O ORÇAMENTO IDEAL!</span>
             </h1>
           </div>
-
+          
           <p className="pt-8 text-2xl text-center text-primary">
             <span className="p-3">
               ECONOMIZE TEMPO E DINHEIRO COM A MELHOR PLATAFORMA
@@ -40,7 +40,7 @@ const AboutTitle: React.FC = () => {
       </div>
     </section>
     <Team />
-
+   
     <section className=" justify-center items-center pb-[70px]">
       <div className="max-w-6xl mx-auto">
         <div className="border border-dashed p-10 rounded-lg">
@@ -62,5 +62,5 @@ const AboutTitle: React.FC = () => {
     <Support /> 
   </>
 };
-
+ 
 export default AboutTitle;

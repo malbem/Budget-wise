@@ -2,7 +2,7 @@
 
 import ScrollToTop from "@/components/ScrollToTop";
 import "../styles/index.css";
- 
+   
 export default function RootLayout({
   children,
 }: {
