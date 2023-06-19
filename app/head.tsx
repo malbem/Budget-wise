@@ -1,5 +1,5 @@
 export default function Head() { 
-  return ( 
+  return (   
     <> 
       <title>Budget Wise</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
