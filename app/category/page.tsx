@@ -3,9 +3,9 @@ import HomeEcommerce from '@/components/Ecommerce';
 import EcommerceFilter from '@/components/Ecommerce/EcommerceFilter';
 import Header from '@/components/Ecommerce/Header';
 import Footer from '@/components/Footer';
-
+ 
 import React from 'react';
-
+ 
 const Ecommerce: React.FC = () => {
     return <>
         <Header />
@@ -15,8 +15,8 @@ const Ecommerce: React.FC = () => {
             </div>
         </section>
         <Footer />
-
+ 
     </>;
 }
-
+ 
 export default Ecommerce;
