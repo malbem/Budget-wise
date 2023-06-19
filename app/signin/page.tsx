@@ -82,7 +82,7 @@ const LoginModal: React.FC = () => {
                     htmlFor="password"
                     className="mb-3 block text-sm font-medium text-dark dark:text-white"
                   >
-                    Sua senha
+                    Sua senha 
                   </label>
                   <input
                     type="password"
