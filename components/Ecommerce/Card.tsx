@@ -1,14 +1,20 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
+import { FaPlus } from "react-icons/fa";
 
 interface CardProps {
   imagem: string;
+  name: string;
   descricao: string;
   avaliacao: number;
   preco: number;
   href: string;
 }
 
-const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href }) => {
+const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href, name }) => {
+  const [hovered, setHovered] = useState(false);
+
   const renderStars = (avaliacao: number) => {
     const fullStars = Math.floor(avaliacao);
     const halfStar = avaliacao % 1 !== 0;
@@ -63,14 +69,28 @@ const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href }
     );
   };
 
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
   return (
     <a href={href}>
-      <div className=" hover:scale-[1.03] w-full max-w-sm bg-white border border-[#5f5f5f] rounded-lg shadow dark:bg-[#1a202c] dark:border-[#1c212c]">
+      <div
+        className={`!z-[9999] w-full max-w-sm bg-white border border-[#5f5f5f] rounded-lg shadow dark:bg-[#1a202c] dark:border-[#1c212c] transition-transform duration-300 ${hovered ? "hover:scale-[1.03] hover:opacity-90" : ""
+          }`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="flex justify-center">
-          <img className=" rounded-[50px] p-8 w-full h-50 object-contain" src={imagem} alt="product image" />
+          <img className="rounded-[50px] p-8 w-full h-50 object-contain" src={imagem} alt="product image" />
         </div>
         <div className="px-5 pb-5">
-          <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{descricao}</h5>
+          <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{name}</h5>
+          <h5 className="text-xs font-semibold tracking-tight text-gray-900 dark:text-white">{descricao}</h5>
           <div className="flex items-center mt-2.5 mb-5">
             {renderStars(avaliacao)}
             <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
@@ -78,7 +98,10 @@ const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href }
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">${preco}</span>
+            <span className="text-3xl font-bold text-gray-900 dark:text-white">R${preco}</span>
+            {hovered && (
+              <FaPlus className="w-6 h-6 text-primary cursor-pointer" />
+            )}
           </div>
         </div>
       </div>

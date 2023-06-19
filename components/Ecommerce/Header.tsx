@@ -5,6 +5,7 @@ import Link from "next/link";
 import ThemeToggler from "../ThemeToggler";
 import { FaSearch, FaShoppingCart, FaHeart, FaUser, FaBars } from "react-icons/fa";
 import Modal from "../Modal";
+import Cart from "./cart";
 
 const Header = () => {
     const [sticky, setSticky] = useState(false);
@@ -68,20 +69,20 @@ const Header = () => {
         },
     ];
 
-    
+
     const searchContainerRef = useRef(null);
 
     const handleOutsideClick = (event) => {
-      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
-        setSearchActive(false);
-      }
+        if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+            setSearchActive(false);
+        }
     };
-  
+
     useEffect(() => {
-      document.addEventListener('mousedown', handleOutsideClick);
-      return () => {
-        document.removeEventListener('mousedown', handleOutsideClick);
-      };
+        document.addEventListener('mousedown', handleOutsideClick);
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
     }, []);
 
 
@@ -113,18 +114,17 @@ const Header = () => {
 
     return (
         <>
+
+            <Modal isOpen={isModalOpen} onClose={handleModalClose} >
+                <Cart />
+            </Modal>
             <header
                 className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${sticky
-                        ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
-                        : "absolute"
+                    ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
+                    : "absolute"
                     }`}
             >
-                <Modal isOpen={isModalOpen} onClose={handleModalClose}>
-                    <h2>Modal Content</h2>
-                    <div className="pt-5 flex justify-center items-center">
-                        <div className="pt-5 flex justify-center items-center"></div>
-                    </div>
-                </Modal>
+
 
                 <div className="container">
                     <div className="relative -mx-4 flex items-center justify-between">
