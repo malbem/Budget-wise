@@ -3,7 +3,7 @@ import Header from "@/components/NavLadding";
 import SvgComponent from "@/components/SvgComponent";
 import Link from "next/link";
   
-const SignupPage = () => { 
+const SignupPage = () => {  
   return <>  
   <Header/>
     <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
