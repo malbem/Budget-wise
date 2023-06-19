@@ -5,7 +5,7 @@ const SvgComponent = () => (
     <svg
       width="1440"
       height="969"
-      viewBox="0 0 1440 969"
+      viewBox="0 0 1440 969" 
       fill="none"
       xmlns="http://www.w3.org/2000/svg" 
     >
