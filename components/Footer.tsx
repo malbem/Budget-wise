@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer>
+    <footer> 
       <Modal isOpen={isModalOpen} onClose={handleModalClose}>
         {modalContent && (
           <>
