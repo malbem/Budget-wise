@@ -8,7 +8,7 @@ const AboutTitle: React.FC = () => {
   return <>
   <Header/>
     <section >
-      <div className="flex flex-col md:flex-row items-center justify-center my-8 md:my-16 p-[50px] ">
+       <div className="flex flex-col md:flex-row items-center justify-center my-8 md:my-16 p-[50px] ">
         <div className="flex flex-col items-center">
           <img src="./images/About.png" className="h-125 w-125 mb-4" alt="Imagem sobre" />
           <div className="text-center md:text-left text-4xl whitespace-normal mb-4">
