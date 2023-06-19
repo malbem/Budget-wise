@@ -5,7 +5,7 @@ import { FaPlus, FaStar } from "react-icons/fa";
 import Card from "./Card";
 import produtos from "./produtos";
 import Modal from "../Modal";
-
+ 
 interface Product {
   id: number;
   name: string;
