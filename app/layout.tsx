@@ -22,7 +22,7 @@ export default function RootLayout({
           <ScrollToTop />
         </Providers>
       </body>
-
+ 
       <style jsx global>{`
         body {
           background-attachment: fixed;
