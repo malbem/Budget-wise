@@ -47,7 +47,7 @@ const Team: React.FC = () => {
                         </a>
                     ))}
                 </div>
-            </div>
+            </div> 
         </section>
     );
 };
