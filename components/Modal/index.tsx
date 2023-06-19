@@ -14,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     if (e.target === e.currentTarget) {
       onClose();
     } 
-  };
+  }; 
 
   useEffect(() => {
     if (isOpen && modalRef.current) {
