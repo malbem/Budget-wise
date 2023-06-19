@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
-
+   
 type ModalProps = {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean; 
+  onClose: () => void; 
   children: React.ReactNode;
 };
 
@@ -13,8 +13,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
-    }
-  };
+    } 
+  }; 
 
   useEffect(() => {
     if (isOpen && modalRef.current) {
@@ -50,4 +50,4 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   );
 };
 
-export default Modal;
+export default Modal; 

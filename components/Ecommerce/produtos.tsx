@@ -1,4 +1,5 @@
 const produtos = [
+<<<<<<< HEAD
   {
     id: 1,
     href: "https://google.com",
@@ -103,4 +104,27 @@ const produtos = [
 ];
 
 export default produtos;
+=======
+    { 
+      id: 1,
+      href: "https://google.com",
+      imagem: "/images/produtos/produto_01.png", 
+      name: "Nada nome",
+      descricao: "Nada descrição",
+      avaliacao: 1,
+      preco: 98000.5
+    }, {
+      id: 1,
+      href: "https://google.com",
+      imagem: "/images/produtos/produto_01.png",
+      name: "Nada nome2",
+      descricao: "Nada descrição",
+      avaliacao: 1, 
+      preco: 98000.5
+    }, 
+    
+  ];
+  
+  export default produtos;
+>>>>>>> f42ed4b193be13de385512294ffb7d6305e6bacd
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 import React, { useState } from "react";
 import { FaPlus, FaStar } from "react-icons/fa";
@@ -5,6 +6,12 @@ import Card from "./Card";
 import produtos from "./produtos";
 import Modal from "../Modal";
 
+=======
+"use client" 
+
+import React, { useState } from "react";
+ 
+>>>>>>> f42ed4b193be13de385512294ffb7d6305e6bacd
 interface Product {
   id: number;
   name: string;
@@ -16,6 +23,7 @@ interface Product {
   href: string;
 }
 
+<<<<<<< HEAD
 const products: Product[] = produtos.map((produto) => ({
   id: produto.id,
   name: produto.name,
@@ -29,6 +37,15 @@ const products: Product[] = produtos.map((produto) => ({
 
 const productsPerPage = 1;
 
+=======
+const products: Product[] = [
+  { id: 1, name: "Product 1", category: "Category A", price: 10 },
+  { id: 2, name: "Product 2", category: "Category B", price: 20 },
+  { id: 3, name: "Product 3", category: "Category A", price: 15 },
+  { id: 4, name: "Product 4", category: "Category C", price: 25 },
+];
+ 
+>>>>>>> f42ed4b193be13de385512294ffb7d6305e6bacd
 const EcommerceFilter: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [minPrice, setMinPrice] = useState<string>("");

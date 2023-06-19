@@ -1,8 +1,8 @@
-"use client"
-
+"use client" 
+ 
 import React, { useState, useEffect } from "react";
 
-interface CarouselProps {
+interface CarouselProps {  
   images: string[];
 }
 
@@ -27,6 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="relative w-full">
       <div className=" hover:cursor-pointer relative h-56 overflow-hidden rounded-lg md:h-96">
         <img
@@ -34,6 +35,40 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
           src={images[currentIndex]}
           alt="Carousel"
         />
+=======
+    <div className="relative cursor-pointer"> 
+      <img
+        className="rounded w-full max-h-64"
+        src={images[currentIndex]}
+        alt="Carousel"
+      />
+
+      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-4">
+        <button
+          className="text-black bg-white dark:bg-black dark:text-white font-bold backdrop-blur-sm px-3 py-[1px] rounded-l"
+          onClick={goToPrevious}
+        >
+          {"<"}
+        </button>
+
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={`inline-block w-3 h-3 mx-1 rounded-full border border-white dark:border-black dark:border-opacity-30 border-opacity-30 ${
+              index === currentIndex
+                ? "border border-white dark:border-black bg-black bg-opacity-80 dark:border-opacity-100 border-opacity-100 dark:bg-white dark:bg-opacity-80"
+                : "bg-black dark:bg-white dark:bg-opacity-50 bg-opacity-50"
+            }`}
+          ></span>
+        ))}
+
+        <button
+          className="text-black dark:text-white bg-white dark:bg-black font-bold backdrop-blur-sm px-3 py-[1px] rounded-r"
+          onClick={goToNext} 
+        >
+          {">"}
+        </button>
+>>>>>>> f42ed4b193be13de385512294ffb7d6305e6bacd
       </div>
 
       <button

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+ 
 
 const Team: React.FC = () => {
     const [teamMembers, setTeamMembers] = useState<{ name: string; image: string, link: string }[]>([]);
-
+ 
     useEffect(() => {
         const members = [
             { name: 'Isaac Huston', image: './images/Foto.png', link: 'https://github.com/malbem' },
@@ -25,7 +26,7 @@ const Team: React.FC = () => {
             const j = Math.floor(Math.random() * (i + 1));
             [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
         }
-        return shuffled;
+        return shuffled; 
     };
 
     return (
@@ -46,9 +47,9 @@ const Team: React.FC = () => {
                         </a>
                     ))}
                 </div>
-            </div>
+            </div> 
         </section>
     );
 };
 
-export default Team;
+export default Team; 

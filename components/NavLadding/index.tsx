@@ -1,12 +1,12 @@
-"use client"
+"use client" 
 import Image from "next/image";
-import Link from "next/link";
+import Link from "next/link"; 
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import ThemeToggler from "../ThemeToggler";
+import ThemeToggler from "../ThemeToggler"; 
 
-const Header = () => {
+const Header = () => { 
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
@@ -117,7 +117,7 @@ const Header = () => {
                   href="/signin"
                   className="py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white"
                 >
-                  Login
+                  Login 
                 </Link>
                 <Link
                   href="/signup"

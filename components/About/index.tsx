@@ -1,9 +1,9 @@
-import React from 'react';
-import Team from './team';
+import React from 'react'; 
+import Team from './team'; 
 import Support from './support';
 import Header from '../NavLadding';
 
-
+   
 const AboutTitle: React.FC = () => {
   return <>
     <Header/>
@@ -55,11 +55,11 @@ const AboutTitle: React.FC = () => {
             </div>
             <h3 className="pt-5 text-lg sm:text-xl font-semibold mb-2 text-center sm:text-right">Gustavo Guanabara</h3>
             <h4 className="text-base sm:text-lg font-normal text-center sm:text-right opacity-70">CLIENTE DA EMPRESA</h4>
-          </div>
+          </div> 
         </div>
       </div>
     </section>
-    <Support />
+    <Support /> 
   </>
 };
 

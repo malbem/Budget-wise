@@ -1,10 +1,10 @@
 
-import Footer from '@/components/Footer';
-import Header from '@/components/NavLadding';
+import Footer from '@/components/Footer'; 
+import Header from '@/components/NavLadding'; 
 import SvgComponent from '@/components/SvgComponent';
 import Link from 'next/link';
-import React from 'react';
-
+import React from 'react';  
+  
 const LoginModal: React.FC = () => {
   return <>
     <Header />
@@ -82,7 +82,7 @@ const LoginModal: React.FC = () => {
                     htmlFor="password"
                     className="mb-3 block text-sm font-medium text-dark dark:text-white"
                   >
-                    Sua senha
+                    Sua senha 
                   </label>
                   <input
                     type="password"

@@ -2,7 +2,7 @@
 
 import ScrollToTop from "@/components/ScrollToTop";
 import "../styles/index.css";
-
+ 
 export default function RootLayout({
   children,
 }: {
@@ -22,7 +22,7 @@ export default function RootLayout({
           <ScrollToTop />
         </Providers>
       </body>
-
+ 
       <style jsx global>{`
         body {
           background-attachment: fixed;
