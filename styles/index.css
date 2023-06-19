@@ -19,7 +19,7 @@
     @apply py-5 lg:py-2;
   }
 
-  .sticky .menu-scroll.active {
+    .sticky .menu-scroll.active {
     @apply opacity-70;
   }
 
