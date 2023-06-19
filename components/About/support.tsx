@@ -130,10 +130,10 @@ const Support: React.FC = () => {
               </form>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </section>
   );
 };
  
-export default Support;
+export default Support; 
