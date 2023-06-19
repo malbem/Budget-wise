@@ -62,5 +62,5 @@ const AboutTitle: React.FC = () => {
     <Support /> 
   </>
 };
-
+ 
 export default AboutTitle;
