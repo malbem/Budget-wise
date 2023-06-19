@@ -1,5 +1,5 @@
 
-import HomeEcommerce from '@/components/Ecommerce';
+import HomeEcommerce from '@/components/Ecommerce'; 
 import EcommerceFilter from '@/components/Ecommerce/EcommerceFilter';
 import Header from '@/components/Ecommerce/Header';
 import Footer from '@/components/Footer';
