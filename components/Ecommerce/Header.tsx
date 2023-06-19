@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ThemeToggler from "../ThemeToggler";
+import ThemeToggler from "../ThemeToggler"; 
 import { FaSearch, FaShoppingCart, FaHeart, FaUser, FaBars } from "react-icons/fa";
 import Modal from "../Modal";
 import Cart from "./cart";
