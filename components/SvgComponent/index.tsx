@@ -2,7 +2,7 @@ import React from "react";
 
 const SvgComponent = () => (
   <div className="absolute top-0 left-0 z-[-1]">
-    <svg
+    <svg 
       width="1440"
       height="969"
       viewBox="0 0 1440 969" 
