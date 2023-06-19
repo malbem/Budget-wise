@@ -59,7 +59,7 @@ const AboutTitle: React.FC = () => {
         </div>
       </div>
     </section>
-    <Support />
+    <Support /> 
   </>
 };
 
