@@ -2,7 +2,7 @@
  
 import React, { useState } from "react";
 interface CardProps {
-  imagem: string;
+   imagem: string;
   name: string;
   descricao: string;
   avaliacao: number;
