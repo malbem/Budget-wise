@@ -6,7 +6,7 @@ interface CardProps {
   name: string;
   descricao: string;
   avaliacao: number;
-  preco: number;
+  preco: number; 
   href: string;
 }
  
