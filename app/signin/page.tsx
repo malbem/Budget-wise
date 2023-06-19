@@ -5,8 +5,8 @@ import SvgComponent from '@/components/SvgComponent';
 import Link from 'next/link'; 
 import React from 'react';   
     
-const LoginModal: React.FC = () => {
-  return <>
+const LoginModal: React.FC = () => { 
+  return <> 
     <Header />
     <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
       <div className="container">
