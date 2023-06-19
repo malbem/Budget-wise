@@ -17,7 +17,7 @@ const AboutTitle: React.FC = () => {
               <span className="font-bold text-yellow">O ORÇAMENTO IDEAL!</span>
             </h1>
           </div>
-    
+     
           <p className="pt-8 text-2xl text-center text-primary">
             <span className="p-3">
               ECONOMIZE TEMPO E DINHEIRO COM A MELHOR PLATAFORMA
