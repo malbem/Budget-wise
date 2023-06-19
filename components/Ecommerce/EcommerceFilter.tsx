@@ -15,7 +15,7 @@ const products: Product[] = [
   { id: 3, name: "Product 3", category: "Category A", price: 15 },
   { id: 4, name: "Product 4", category: "Category C", price: 25 },
 ];
-
+ 
 const EcommerceFilter: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [selectedPriceRange, setSelectedPriceRange] = useState<number[]>([0, 0]);
