@@ -13,7 +13,7 @@ const AboutTitle: React.FC = () => {
           <img src="./images/About.png" className="h-125 w-125 mb-4" alt="Imagem sobre" />
           <div className="text-center md:text-left text-4xl whitespace-normal mb-4">
             <h1 className="text-purple-500">
-              O CAMINHO CERTO PARA ENCONTRAR{' '}
+                O CAMINHO CERTO PARA ENCONTRAR{' '}
               <span className="font-bold text-yellow">O ORÇAMENTO IDEAL!</span>
             </h1>
           </div>
