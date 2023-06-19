@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
           >
             <button
               className="absolute top-4 right-4 text-black hover:text-[#FF0000]"
-              onClick={onClose}
+              onClick={onClose} 
             >
               <FaTimes />
             </button>
