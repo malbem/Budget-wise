@@ -89,17 +89,17 @@ const Header = () => {
               {!isSmallScreen ? (
                 <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                   <li>
-                    <a className="hover:opacity-70" href="#About">
+                    <a className="hover:opacity-70" href="/#About">
                       Sobre
                     </a>
                   </li>
                   <li>
-                    <a className="hover:opacity-70" href="#Team">
+                    <a className="hover:opacity-70" href="/#Team">
                       Equipe
                     </a>
                   </li>
                   <li>
-                    <a className="hover:opacity-70" href="#Contact-us">
+                    <a className="hover:opacity-70" href="/#Contact-us">
                       Contate-nos
                     </a>
                   </li>
@@ -107,20 +107,19 @@ const Header = () => {
               ) : (
                 <button
                   className="flex items-center justify-center px-4 py-2 text-base font-semibold text-dark hover:opacity-70 dark:text-white md:hidden"
-                  onClick={navbarToggleHandler}
                 >
                   <FontAwesomeIcon icon={faBars} />
                 </button>
               )}
               <div className="flex items-center space-x-4">
                 <Link
-                  href="/signin"
+                  href="./signin"
                   className="py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white"
                 >
                   Login 
                 </Link>
                 <Link
-                  href="/signup"
+                  href="./signup"
                   className="ease-in-up rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp"
                 >
                   Criar conta

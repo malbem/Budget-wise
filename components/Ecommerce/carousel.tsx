@@ -27,21 +27,21 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   }, []);
 
   return (
-    <div className="relative cursor-pointer"> 
+    <div className="relative cursor-pointer "> 
       <img
-        className="rounded w-full max-h-64"
+        className="rounded w-full max-h-64 "
         src={images[currentIndex]}
         alt="Carousel"
       />
 
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-4">
+      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-4 ">
         {images.map((_, index) => (
           <span
             key={index}
-            className={`inline-block w-3 h-3 mx-1 rounded-full border border-white dark:border-black dark:border-opacity-30 border-opacity-30 ${
+            className={`inline-block w-3 h-3 mx-1 rounded-full border border-black dark:border-black dark:border-opacity-30 border-opacity-30 ${
               index === currentIndex
-                ? "border border-white dark:border-black bg-black bg-opacity-80 dark:border-opacity-100 border-opacity-100 dark:bg-white dark:bg-opacity-80"
-                : "bg-black dark:bg-white dark:bg-opacity-50 bg-opacity-50"
+                ? " bg-black bg-opacity-80 dark:border-opacity-100 border-opacity-100 dark:bg-black dark:bg-opacity-80"
+                : "bg-black dark:bg-black dark:bg-opacity-50 bg-opacity-50"
             }`}
           ></span>
         ))}
@@ -49,11 +49,11 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
       <button
         type="button"
-        className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="  absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         data-carousel-prev
         onClick={goToPrevious}
       >
-        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className=" border text-black inline-flex items-center justify-center w-8 h-8 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
           <svg
             aria-hidden="true"
             className="w-5 h-5  dark:text-gray-800"
@@ -69,11 +69,11 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       </button>
       <button
         type="button"
-        className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className=" absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         data-carousel-next
         onClick={goToNext}
       >
-        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className=" border text-black inline-flex items-center justify-center w-8 h-8 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
           <svg
             aria-hidden="true"
             className="w-5 h-5  dark:text-gray-800"

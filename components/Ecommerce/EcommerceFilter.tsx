@@ -28,7 +28,7 @@ const products: Product[] = produtos.map((produto) => ({
   href: produto.href,
 }));
 
-const productsPerPage = 1;
+const productsPerPage = 30;
 
 const EcommerceFilter: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
