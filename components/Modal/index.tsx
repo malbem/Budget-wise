@@ -3,7 +3,7 @@ import { FaTimes } from "react-icons/fa";
    
 type ModalProps = {
   isOpen: boolean; 
-   onClose: () => void; 
+   onClose: () => void;  
    children: React.ReactNode;
 };
 
