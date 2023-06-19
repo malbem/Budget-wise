@@ -8,7 +8,7 @@ export default function ScrollToTop() {
       top: 0,
       behavior: "smooth",
     });
-  };
+  }; 
  
   useEffect(() => {
     const toggleVisibility = () => {
