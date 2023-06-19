@@ -93,7 +93,7 @@ const Support: React.FC = () => {
                     placeholder="Nome completo"
                     className="w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-black font-semibold focus:border-indigo-500 focus:outline-none"
                   />
-                </div>
+                </div> 
 
                 <div className="flex flex-col mt-2">
                   <label htmlFor="email" className="hidden">
