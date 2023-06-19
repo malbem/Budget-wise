@@ -3,7 +3,7 @@ import produtos from "./produtos";
 import Card from "./Card";
 import Carousel from "./carousel";
 
-
+ 
 const HomeEcommerce: React.FC = () => {
   const images = [
     "images/carousel/promocao-01.png",
