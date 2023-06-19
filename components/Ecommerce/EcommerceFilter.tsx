@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client"
 import React, { useState } from "react";
 import { FaPlus, FaStar } from "react-icons/fa";
@@ -6,12 +6,6 @@ import Card from "./Card";
 import produtos from "./produtos";
 import Modal from "../Modal";
 
-=======
-"use client" 
-
-import React, { useState } from "react";
- 
->>>>>>> f42ed4b193be13de385512294ffb7d6305e6bacd
 interface Product {
   id: number;
   name: string;
@@ -23,7 +17,6 @@ interface Product {
   href: string;
 }
 
-<<<<<<< HEAD
 const products: Product[] = produtos.map((produto) => ({
   id: produto.id,
   name: produto.name,
@@ -37,15 +30,6 @@ const products: Product[] = produtos.map((produto) => ({
 
 const productsPerPage = 1;
 
-=======
-const products: Product[] = [
-  { id: 1, name: "Product 1", category: "Category A", price: 10 },
-  { id: 2, name: "Product 2", category: "Category B", price: 20 },
-  { id: 3, name: "Product 3", category: "Category A", price: 15 },
-  { id: 4, name: "Product 4", category: "Category C", price: 25 },
-];
- 
->>>>>>> f42ed4b193be13de385512294ffb7d6305e6bacd
 const EcommerceFilter: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [minPrice, setMinPrice] = useState<string>("");
@@ -137,7 +121,7 @@ const EcommerceFilter: React.FC = () => {
           <hr />
           <div className="pb-5">
             <h2 className="text-xl pt-7 font-bold opacity-70 pb-3">Faixa de preço</h2>
-            <div className="flex border-collapse text-white">
+            <div className="flex border-collapse ">
               <p className="border p-2 rounded-s-lg">R$</p>
               <input
                 type="text"
@@ -231,9 +215,8 @@ const EcommerceFilter: React.FC = () => {
               {Array.from({ length: Math.ceil(filterProducts().length / productsPerPage) }, (_, index) => (
                 <button
                   key={index + 1}
-                  className={`mx-1 px-3 py-1 rounded-lg ${
-                    currentPage === index + 1 ? "bg-gray-500 text-white" : "bg-white text-gray-500"
-                  }`}
+                  className={`mx-1 px-3 py-1 rounded-lg ${currentPage === index + 1 ? " bg-black dark:bg-white  text-white dark:text-black" : " "
+                    }`}
                   onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}
