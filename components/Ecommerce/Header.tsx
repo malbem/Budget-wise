@@ -57,15 +57,14 @@ const Header = () => {
             onClick: handleModalClose,
             dropdown: [
                 { label: "Serviço 1", url: "/e-commerce" },
-                { label: "Serviço 2", url: "#" },
-                { label: "Serviço 3", url: "#" },
+                { label: "Serviço 2", url: "/e-commerce" },
+                { label: "Serviço 3", url: "/e-commerce" },
             ],
         },
         {
             label: "Categorias",
-            url: "#",
+            url: "/category",
             onClick: handleModalClose,
-            dropdown: [{ label: "Categoria 1", url: "#" }],
         },
     ];
 
@@ -193,7 +192,9 @@ const Header = () => {
                                                         }}
                                                     >
                                                         <div className="hover:opacity-70 cursor-pointer">
-                                                            {item.label}
+                                                            <a href={item.url}>
+                                                                {item.label}
+                                                            </a>
                                                         </div>
                                                         {activeDropdown === index &&
                                                             item.dropdown &&
@@ -232,7 +233,9 @@ const Header = () => {
                                                 }}
                                             >
                                                 <div className="hover:opacity-70 cursor-pointer">
-                                                    {item.label}
+                                                    <a href={item.url}>
+                                                        {item.label}
+                                                    </a>
                                                 </div>
                                                 {activeDropdown === index &&
                                                     item.dropdown &&

@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react";
-import { FaPlus } from "react-icons/fa";
 
 interface CardProps {
   imagem: string;
@@ -80,13 +79,17 @@ const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href, 
   return (
     <a href={href}>
       <div
-        className={`!z-[9999] w-full max-w-sm bg-white border border-[#5f5f5f] rounded-lg shadow dark:bg-[#1a202c] dark:border-[#1c212c] transition-transform duration-300 ${hovered ? "hover:scale-[1.03] hover:opacity-90" : ""
+        className={`!z-[9999] w-full max-w-sm max-h-lg h-full bg-white border hover:border-primary border-[#5f5f5f] rounded-lg shadow dark:bg-[#1a202c] dark:border-[#1c212c] transition-transform duration-300 ${hovered ? "hover:scale-[1.03] hover:opacity-90" : ""
           }`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="flex justify-center">
-          <img className="rounded-[50px] p-8 w-full h-50 object-contain" src={imagem} alt="product image" />
+        <div className="flex justify-center ">
+          <img
+            height={384}
+            width={384}
+
+            className="rounded-[50px] p-8 object-contain" src={imagem} alt="product image" />
         </div>
         <div className="px-5 pb-5">
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{name}</h5>
@@ -98,10 +101,8 @@ const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href, 
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">R${preco}</span>
-            {hovered && (
-              <FaPlus className="w-6 h-6 text-primary cursor-pointer" />
-            )}
+            <span className="text-2xl sm:text-xl font-bold dark:text-white">R${preco}</span>
+
           </div>
         </div>
       </div>
