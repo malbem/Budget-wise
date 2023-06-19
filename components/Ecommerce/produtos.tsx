@@ -13,7 +13,7 @@ const produtos = [
       imagem: "/images/produtos/produto_01.png",
       name: "Nada nome2",
       descricao: "Nada descrição",
-      avaliacao: 1,
+      avaliacao: 1, 
       preco: 98000.5
     }, 
     
