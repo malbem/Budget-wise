@@ -55,7 +55,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
         <button
           className="text-black dark:text-white bg-white dark:bg-black font-bold backdrop-blur-sm px-3 py-[1px] rounded-r"
-          onClick={goToNext}
+          onClick={goToNext} 
         >
           {">"}
         </button>
