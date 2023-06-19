@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import ThemeToggler from "../ThemeToggler"; 
-
+    
   const Header = () => { 
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
