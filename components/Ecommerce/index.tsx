@@ -1,15 +1,6 @@
 import React from "react";
-import produtos from "./produtos";
-import Card from "./Card";
-<<<<<<< HEAD
 import Carousel from "./carousel";
-import EcommerceFilter from "./EcommerceFilter";
 
-=======
-import Carousel from "./carousel";  
->>>>>>> f42ed4b193be13de385512294ffb7d6305e6bacd
-
- 
 const HomeEcommerce: React.FC = () => {
   const images = [
     "images/carousel/promocao-01.png",
