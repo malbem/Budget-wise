@@ -47,7 +47,7 @@ const AboutTitle: React.FC = () => {
           <h2 className="text-4xl sm:text-6xl font-extrabold mb-4 text-center">Os clientes dizem</h2>
           <div className="p-8">
             <div className="mb-4">
-              <p className="text-lg sm:text-xl mb-3 opacity-70">
+               <p className="text-lg sm:text-xl mb-3 opacity-70">
                 <span className="text-xl sm:text-2xl mr-2">
                   &#8220;Minha experiência na Budget Wise foi incrível! Encontrei exatamente o que precisava para meu projeto, com orçamentos personalizados e uma ampla rede de fornecedores. A equipe de suporte foi excepcional, me auxiliando em todas as etapas. Recomendo a Budget Wise a todos que buscam qualidade e economia. &#8221;
                 </span>
