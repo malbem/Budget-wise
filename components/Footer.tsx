@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import Modal from "./Modal";
-import Team from "./About/team";
+import Team from "./About/team"; 
 import Support from "./About/support";
   
 const Footer: React.FC = () => {
