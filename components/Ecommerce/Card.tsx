@@ -1,7 +1,7 @@
 "use client" 
  
 import React, { useState } from "react";
-interface CardProps {
+interface CardProps { 
   imagem: string;
   name: string;
   descricao: string;
