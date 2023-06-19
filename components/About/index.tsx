@@ -40,7 +40,7 @@ const AboutTitle: React.FC = () => {
       </div>
     </section>
     <Team />
-
+ 
     <section className=" justify-center items-center pb-[70px]">
       <div className="max-w-6xl mx-auto">
         <div className="border border-dashed p-10 rounded-lg">
