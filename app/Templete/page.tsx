@@ -12,7 +12,7 @@ const Templete: React.FC = () => {
         <Footer />
   
     </>;
-}
+} 
 {/* Altere o nome com o mesmo do de cima */}
 export default Templete;     
  
