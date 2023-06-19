@@ -41,7 +41,7 @@ const Support: React.FC = () => {
                 <div className="flex items-center mt-4">
                   <svg
                     fill="none"
-                    stroke="currentColor"
+                    stroke="currentColor" 
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
