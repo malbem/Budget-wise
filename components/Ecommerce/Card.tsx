@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa"; 
  
 interface CardProps {
   imagem: string;
