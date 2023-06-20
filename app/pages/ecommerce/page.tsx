@@ -10,9 +10,7 @@ const ecommerce: React.FC = () => {
     return <>
 
         <Header />
-        
         <EcommerceFilter/>
-
         <Footer />
 
     </>

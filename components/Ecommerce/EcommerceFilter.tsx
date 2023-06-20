@@ -4,6 +4,8 @@ import { FaPlus, FaStar } from "react-icons/fa";
 import Card from "./Card";
 import produtos from "./produtos";
 import Modal from "../Modal";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface Product {
   id: number;
@@ -87,6 +89,8 @@ const EcommerceFilter: React.FC = () => {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
+  const [addToCartSuccess, setAddToCartSuccess] = useState(false);
+
 
   const startIndex = (currentPage - 1) * productsPerPage;
   const endIndex = startIndex + productsPerPage;
@@ -94,8 +98,8 @@ const EcommerceFilter: React.FC = () => {
 
 
 
-  return (
-
+  return <>
+    <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
     <div className="pt-[200px]">
       <h1 className="text-2xl font-bold">Lista de produtos</h1>
       <div className="flex">
@@ -103,7 +107,7 @@ const EcommerceFilter: React.FC = () => {
         <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
           {selectedCard && (
             <>
-              <div className="" >
+              <div className="">
                 <h2>{selectedCard.name}</h2>
                 <Card
                   key={selectedCard.id}
@@ -116,15 +120,29 @@ const EcommerceFilter: React.FC = () => {
                   onClick={null}
                 />
                 <div className="pt-5">
-                  <button onClick={null} className="border rounded-lg p-2 flex items-center justify-between text-center  text-[#00FF00] font-bold" >Adicionar ao Carrinho</button>
+                  <button onClick={() => {
+                    toast.success("Adicionado ao carrinho com sucesso!", {
+                      position: "top-center",
+                      autoClose: 3000,
+                      hideProgressBar: true,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      // Aqui você pode adicionar opções de estilo adicionais se desejar
+                    });
+                    setShowModal(false);
+                  }} className="border rounded-lg p-2 flex items-center justify-between text-center  text-[#00FF00] font-bold">Adicionar ao Carrinho</button>
+
                 </div>
-                <p></p>
+                {addToCartSuccess}
               </div>
             </>
           )}
         </Modal>
 
-        <div className="w-1/4 pr-7 px-5 rounded-lg">
+
+        <div className="w-1/4 pr-7 px-5 rounded-lg">""
           <div className="pb-5">
             <h2 className="text-xl pt-5 pb-3 opacity-70 font-bold">Categorias</h2>
             <ul className="cursor-pointer">
@@ -264,7 +282,7 @@ const EcommerceFilter: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  </>;
 };
 
 export default EcommerceFilter;

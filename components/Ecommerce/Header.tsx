@@ -50,7 +50,7 @@ const Header = () => {
     };
 
     const menuItems = [
-        { label: "Home", url: "/e-commerce", onClick: handleModalClose },
+        { label: "Home", url: "/pages/ecommerce", onClick: handleModalClose },
         {
             label: "Serviços",
             url: "#",
@@ -63,7 +63,7 @@ const Header = () => {
         },
         {
             label: "Categorias",
-            url: "/category",
+            url: "/pages/ecommerce",
             onClick: handleModalClose,
         },
     ];

@@ -55,14 +55,14 @@ const Cart = () => {
                 <p className="mt-0.5 text-sm text-gray-500">Frete e impostos calculados na finalização da compra.</p>
                 <div className="mt-6">
                     <a href="#" className="flex items-center justify-center rounded-md border border-transparent bg-primary px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-[#5A67D8]">
-                        Checkout
+                        Comprar
                     </a>
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <p>
                         ou
                         <button onClick={null} type="button" className="font-medium text-primary hover:opacity-70">
-                            <a href="./e-commerce/">
+                            <a href="./ecommerce/">
                                 Continue Comprando
                             </a>
                             <span aria-hidden="true"> &rarr;</span>
