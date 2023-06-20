@@ -1,10 +1,9 @@
-
 "use client"
 import React, { useState } from "react";
 import { FaPlus, FaStar } from "react-icons/fa";
 import Card from "./Card";
 import produtos from "./produtos";
-
+import Modal from "../Modal";
 
 interface Product {
   id: number;
@@ -31,35 +30,42 @@ const products: Product[] = produtos.map((produto) => ({
 const productsPerPage = 30;
 
 const EcommerceFilter: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("");
-  const [minPrice, setMinPrice] = useState<string>("");
-  const [maxPrice, setMaxPrice] = useState<string>("");
-  const [selectedStars, setSelectedStars] = useState<number>(0);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+  const [selectedStars, setSelectedStars] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCard, setSelectedCard] = useState<Product | null>(null);
 
   const categories = Array.from(new Set(products.map((product) => product.category)));
 
   const filterProducts = (): Product[] => {
-    const filteredByCategory = selectedCategory
-      ? products.filter((product) => product.category === selectedCategory)
-      : products;
+    let filteredProducts = products;
 
-    const filteredByPrice = filteredByCategory.filter((product) => {
-      if (!minPrice && !maxPrice) return true;
+    if (selectedCategory) {
+      filteredProducts = filteredProducts.filter((product) => product.category === selectedCategory);
+    }
 
-      const price = product.price;
-      const min = minPrice ? parseFloat(minPrice) : Number.MIN_VALUE;
-      const max = maxPrice ? parseFloat(maxPrice) : Number.MAX_VALUE;
+    if (minPrice || maxPrice) {
+      filteredProducts = filteredProducts.filter((product) => {
+        const price = product.price;
+        const min = minPrice ? parseFloat(minPrice) : Number.MIN_VALUE;
+        const max = maxPrice ? parseFloat(maxPrice) : Number.MAX_VALUE;
+        return price >= min && price <= max;
+      });
+    }
 
-      return price >= min && price <= max;
-    });
+    if (selectedStars) {
+      filteredProducts = filteredProducts.filter((product) => product.avaliacao === selectedStars);
+    }
 
-    const filteredByStars = selectedStars
-      ? filteredByPrice.filter((product) => product.avaliacao === selectedStars)
-      : filteredByPrice;
+    return filteredProducts;
+  };
 
-    return filteredByStars;
+  const handleCardClick = (card: Product) => {
+    setSelectedCard(card);
+    setShowModal(true);
   };
 
   const handleCategoryClick = () => {
@@ -86,14 +92,44 @@ const EcommerceFilter: React.FC = () => {
   const endIndex = startIndex + productsPerPage;
   const displayedProducts = filterProducts().slice(startIndex, endIndex);
 
+
+
   return (
-    <div>
+
+    <div className="pt-[200px]">
       <h1 className="text-2xl font-bold">Lista de produtos</h1>
       <div className="flex">
+
+        <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+          {selectedCard && (
+            <>
+              <div className="" >
+                <h2>{selectedCard.name}</h2>
+                <Card
+                  key={selectedCard.id}
+                  imagem={selectedCard.imagem}
+                  name={selectedCard.name}
+                  descricao={selectedCard.descricao}
+                  avaliacao={selectedCard.avaliacao}
+                  preco={selectedCard.price}
+                  href={null}
+                  onClick={null}
+                />
+                <div className="pt-5">
+                  <button onClick={null} className="border rounded-lg p-2 flex items-center justify-between text-center  text-[#00FF00] font-bold" >Adicionar ao Carrinho</button>
+                </div>
+                <p></p>
+              </div>
+            </>
+          )}
+        </Modal>
+
         <div className="w-1/4 pr-7 px-5 rounded-lg">
           <div className="pb-5">
             <h2 className="text-xl pt-5 pb-3 opacity-70 font-bold">Categorias</h2>
             <ul className="cursor-pointer">
+
+
               <li
                 className={selectedCategory === "" ? "font-bold" : ""}
                 onClick={() => setSelectedCategory("")}
@@ -194,7 +230,7 @@ const EcommerceFilter: React.FC = () => {
         <div className="w-3/4">
           <h2 className="font-bold opacity-70">Produtos filtrados</h2>
           {displayedProducts.length > 0 ? (
-            <div className="border-2 rounded-lg p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-5">
+            <div className=" cursor-pointer border-2 rounded-lg p-5 gap-3 grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4 xs:grid-cols-2 pt-5">
               {displayedProducts.map((product) => (
                 <Card
                   key={product.id}
@@ -203,7 +239,8 @@ const EcommerceFilter: React.FC = () => {
                   descricao={product.descricao}
                   avaliacao={product.avaliacao}
                   preco={product.price}
-                  href={product.href}
+                  href={null}
+                  onClick={() => handleCardClick(product)}
                 />
               ))}
             </div>

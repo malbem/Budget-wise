@@ -1,4 +1,4 @@
-"use client" 
+"use client"
 
 import React, { useState } from "react";
 interface CardProps {
@@ -8,9 +8,10 @@ interface CardProps {
   avaliacao: number;
   preco: number;
   href: string;
+  onClick: () => void;
 }
 
-const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href, name }) => {
+const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href, name, onClick }) => {
   const [hovered, setHovered] = useState(false);
 
   const renderStars = (avaliacao: number) => {
@@ -82,6 +83,7 @@ const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href, 
           }`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onClick={onClick}
       >
         <div className="flex justify-center ">
           <img
