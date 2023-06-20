@@ -59,7 +59,7 @@ const Cart = () => {
                     </a>
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                    <p>
+                    <p className="pr-1">
                         ou
                         <button onClick={null} type="button" className="font-medium text-primary hover:opacity-70">
                             <a href="./ecommerce/">
