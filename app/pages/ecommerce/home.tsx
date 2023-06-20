@@ -1,8 +1,7 @@
 import React from "react";
 import Footer from "@/components/Footer";
 import HomeEcommerce from "@/components/Ecommerce";
-import HomeEcommerce from "@/components/Ecommerce/Header";
-import Home from "@/components/Ecommerce"
+import Header from "@/components/Ecommerce/Header";
 
 const ecommerce: React.FC = () => {
 
