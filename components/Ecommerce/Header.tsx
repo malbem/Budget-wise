@@ -17,10 +17,6 @@ const Header = () => {
         }
     };  
 
-    while(searchActive){
-       setStick(true);
-    }
-
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = () => {
