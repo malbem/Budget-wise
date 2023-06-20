@@ -62,7 +62,7 @@ const Header = () => {
             ],
         },
         {
-            label: "Categorias",
+            label: "Produtos",
             url: "/pages/ecommerce",
             onClick: handleModalClose,
         },
