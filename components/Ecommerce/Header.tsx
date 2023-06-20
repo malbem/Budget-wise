@@ -17,7 +17,7 @@ const Header = () => {
         }
     };  
 
-    if(searchActive){
+    while(searchActive){
        setStick(true);
     }
 
