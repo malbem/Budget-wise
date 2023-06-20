@@ -2,8 +2,8 @@ import React from 'react';
 import Team from './team'; 
 import Support from './support';
 import Header from '../NavLadding';
-          
-                          
+           
+                            
 const AboutTitle: React.FC = () => {
   return <>
   <Header/>
@@ -19,9 +19,9 @@ const AboutTitle: React.FC = () => {
           </div>
           
           <p className="pt-8 text-2xl text-center text-primary">
-            <span className="p-3">
-              ECONOMIZE TEMPO E DINHEIRO COM A MELHOR PLATAFORMA
-            </span>
+          <span className="p-3"> 
+                ECONOMIZE TEMPO E DINHEIRO COM A MELHOR PLATAFORMA
+          </span>
           </p>
         </div>
       </div>
