@@ -3,13 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 interface CarouselProps {  
-  images: string[
-
-   "images/carousel/promocao-01.jpg";
-   "images/carousel/promocao-02.png";
-   "images/carousel/promocao-03.png";
-   "images/carousel/promocao-04.png";
-  ];
+  images: string[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
