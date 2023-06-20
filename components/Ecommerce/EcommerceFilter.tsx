@@ -129,7 +129,6 @@ const EcommerceFilter: React.FC = () => {
                       pauseOnHover: true,
                       draggable: true,
                       progress: undefined,
-                      // Aqui você pode adicionar opções de estilo adicionais se desejar
                     });
                     setShowModal(false);
                   }} className="border rounded-lg p-2 flex items-center justify-between text-center  text-[#00FF00] font-bold">Adicionar ao Carrinho</button>
