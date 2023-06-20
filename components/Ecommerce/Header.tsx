@@ -179,7 +179,7 @@ const Header = () => {
                             ) : (
                                 <>
                                     {menuOpen && (
-                                        <div className=" absolute top-16 left-0 right-0 z-50 backdrop-blur-sm">
+                                        <div className="overflow-hidden absolute top-16 left-0 right-0 z-50 backdrop-blur-sm">
                                             <ul className="flex flex-col items-center space-y-4 py-4 pt-3">
                                                 {menuItems.map((item, index) => (
                                                     <li
