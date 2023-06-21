@@ -9,7 +9,7 @@ interface CardProps {
   preco: number;
   href: string;
   onClick: () => void;
-} 
+}  
   
 const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href, name, onClick }) => {
   const [hovered, setHovered] = useState(false);
