@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ imagem, descricao, avaliacao, preco, href, 
     const halfStar = avaliacao % 1 !== 0;
 
     return (
-      <> 
+      <>  
         {[...Array(fullStars)].map((_, index) => (
           <svg
             key={index}
