@@ -35,7 +35,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       />
 
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-4 ">
-        {images.map((_, index) => (
+        {images.map((index) => (
           <span
             key={index}
             className={`inline-block w-3 h-3 mx-1 rounded-full border border-black dark:border-black dark:border-opacity-30 border-opacity-30 ${
