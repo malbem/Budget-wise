@@ -5,8 +5,8 @@ import Link from "next/link";
 import ThemeToggler from "../ThemeToggler"; 
 import { FaSearch, FaShoppingCart, FaHeart, FaUser, FaBars } from "react-icons/fa";
 import Modal from "../Modal";
-import Cart from "./cart";
-
+import Cart from "./cart";     
+  
 const Header = () => {
     const [sticky, setSticky] = useState(false);
     const handleStickyNavbar = () => {
@@ -15,7 +15,7 @@ const Header = () => {
         } else {
             setSticky(false);
         }
-    };
+    };  
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -50,7 +50,7 @@ const Header = () => {
     };
 
     const menuItems = [
-        { label: "Home", url: "/pages/ecommerce", onClick: handleModalClose },
+        { label: "Home", url: "/pages/home", onClick: handleModalClose },
         {
             label: "Serviços",
             url: "#",
@@ -179,7 +179,7 @@ const Header = () => {
                             ) : (
                                 <>
                                     {menuOpen && (
-                                        <div className=" absolute top-16 left-0 right-0 z-50 backdrop-blur-sm">
+                                        <div className="overflow-hidden absolute top-16 left-0 right-0 z-50 backdrop-blur-sm">
                                             <ul className="flex flex-col items-center space-y-4 py-4 pt-3">
                                                 {menuItems.map((item, index) => (
                                                     <li

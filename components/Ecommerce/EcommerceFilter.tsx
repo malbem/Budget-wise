@@ -152,7 +152,7 @@ const EcommerceFilter: React.FC = () => {
         </Modal>
 
 
-        <div className="w-1/4 pr-7 px-5 rounded-lg">""
+        <div className="w-1/4 pr-7 px-5 rounded-lg">
           <div className="pb-5">
             <h2 className="text-xl pt-5 pb-3 opacity-70 font-bold">Categorias</h2>
             <ul className="cursor-pointer">

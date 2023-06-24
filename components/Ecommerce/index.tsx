@@ -6,7 +6,6 @@ const HomeEcommerce: React.FC = () => {
     "images/carousel/promocao-01.jpg",
     "images/carousel/promocao-03.png",
     "images/carousel/promocao-04.png",
-    "images/carousel/promocao-01.jpg",
     "images/carousel/promocao-05.png",
 
   ];
