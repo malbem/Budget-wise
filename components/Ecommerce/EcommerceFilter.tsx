@@ -29,7 +29,7 @@ const products: Product[] = produtos.map((produto) => ({
   href: produto.href,
 }));
 
-const productsPerPage = 30;
+const productsPerPage = 50;
 
 const EcommerceFilter: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -89,7 +89,7 @@ const EcommerceFilter: React.FC = () => {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
-  const [addToCartSuccess, setAddToCartSuccess] = useState(false);
+  const [addToCartSuccess] = useState(false);
 
 
   const startIndex = (currentPage - 1) * productsPerPage;
@@ -119,11 +119,11 @@ const EcommerceFilter: React.FC = () => {
                   href={null}
                   onClick={null}
                 />
-                <div className="pt-5">
+                <div className="flex pt-9 place-items-center justify-center ">
                   <button onClick={() => {
                     toast.success("Adicionado ao carrinho com sucesso!", {
                       position: "top-center",
-                      autoClose: 3000,
+                      autoClose: 1500,
                       hideProgressBar: true,
                       closeOnClick: true,
                       pauseOnHover: true,
@@ -131,7 +131,18 @@ const EcommerceFilter: React.FC = () => {
                       progress: undefined,
                     });
                     setShowModal(false);
-                  }} className="border rounded-lg p-2 flex items-center justify-between text-center  text-[#00FF00] font-bold">Adicionar ao Carrinho</button>
+                  }} className="
+                        border 
+                        w-full 
+                        rounded-lg 
+                        p-2 
+                        items-center 
+                        text-primary
+                        font-bold 
+                        hover:opacity-70                   
+                  ">
+                    Adicionar ao Carrinho
+                  </button>
 
                 </div>
                 {addToCartSuccess}
